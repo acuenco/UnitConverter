@@ -28,9 +28,44 @@ double convertToMeters(double inches) {
 
 @property (weak, nonatomic) IBOutlet UILabel *outputField;
 
+@property NSMutableString *feetString;
+@property NSMutableString *yardsString;
+@property NSMutableString *metersString;
+
+
 @end
 
 @implementation ViewController
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    NSMutableString *feet = [NSMutableString new];
+    NSMutableString *yards = [NSMutableString new];
+    NSMutableString *meters = [NSMutableString new];
+    
+    double userInput = [inputField.text doubleValue];
+    
+    [feet appendString:[@(convertToFeet(userInput)) stringValue]];
+    [yards appendString:[@(convertToYards(userInput)) stringValue]];
+    [meters appendString:[@(convertToMeters(userInput)) stringValue]];
+
+    
+    if(self.segmentController.selectedSegmentIndex == 0) {
+        outputField.text = feet;
+    }
+    
+    else if(self.segmentController.selectedSegmentIndex == 1) {
+        outputField.text = yards;
+    }
+    
+    else {
+        outputField.text = meters;
+    }
+    
+    return YES;
+}
+
+
 
 - (IBAction)updateButton:(id)sender {
     

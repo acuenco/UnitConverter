@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+/*
 @interface ViewController : UIViewController
 
+@end
+*/
 
+@interface ViewController : UIViewController <UITextFieldDelegate> {
+    IBOutlet UILabel *outputField;
+    IBOutlet UITextField *inputField;
+}
 @end
 
