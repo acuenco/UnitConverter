@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-/*
+
 @interface ViewController : UIViewController
 
-@end
-*/
+@property (weak, nonatomic) IBOutlet UITextField *inputField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentController;
+@property (weak, nonatomic) IBOutlet UILabel *outputField;
 
-@interface ViewController : UIViewController <UITextFieldDelegate> {
-    IBOutlet UILabel *outputField;
-    IBOutlet UITextField *inputField;
-}
+
+
 @end
 

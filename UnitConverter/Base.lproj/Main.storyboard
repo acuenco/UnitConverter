@@ -28,11 +28,11 @@
                                 <rect key="frame" x="134" y="235" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
-                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wxi-au-uRB"/>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntp-1y-QK7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzM-eE-L6z">
-                                <rect key="frame" x="68.5" y="273" width="183" height="21"/>
+                                <rect key="frame" x="69" y="273" width="183" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -45,16 +45,13 @@
                                     <segment title="Meters"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z6V-Ry-yVX"/>
+                                    <action selector="segCon:" destination="BYZ-38-t0r" eventType="valueChanged" id="7ZE-6d-1Yo"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Fo-AU-d5R">
                                 <rect key="frame" x="0.0" y="101" width="253" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="textFieldEdited:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="IWL-ni-qee"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -76,9 +73,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputField" destination="4Fo-AU-d5R" id="BZW-Tp-pNx"/>
-                        <outlet property="outputField" destination="xzM-eE-L6z" id="siR-ri-VKH"/>
-                        <outlet property="segmentController" destination="ist-ab-N2g" id="P5M-f9-vaO"/>
+                        <outlet property="inputField" destination="4Fo-AU-d5R" id="Njr-MO-IK1"/>
+                        <outlet property="outputField" destination="xzM-eE-L6z" id="QFV-uO-c60"/>
+                        <outlet property="segmentController" destination="ist-ab-N2g" id="nzf-r4-LAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
